@@ -1,54 +1,79 @@
-# React + TypeScript + Vite
+# 📝 To-do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+간단한 할 일 목록을 관리할 수 있는 React + TypeScript 기반의 투두 애플리케이션입니다.
+Vite를 사용하여 빠른 개발을 구성하고, 깔끔한 UI와 기본적인 CRUD 기능을 구현했습니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 배포 주소
 
-## Expanding the ESLint configuration
+👉 [https://your-vercel-link.vercel.app](https://your-vercel-link.vercel.app) ← Vercel 배포 후 수정
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📸 미리보기
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+![todo-preview](./preview.png) ← (원하면 캡처 이미지 넣기)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## ✨ 주요 기능
+
+- 할 일 추가
+- 체크박스 클릭으로 완료 표시 (줄 긋기)
+- 할 일 삭제
+- 다크 테마 스타일 적용
+
+---
+
+## 🛠 사용 기술
+
+| 구분     | 기술                       |
+| -------- | -------------------------- |
+| Frontend | React, TypeScript, Vite    |
+| 스타일   | 기본 CSS (`App.css`)       |
+| 배포     | Vercel (예정)              |
+| 기타     | GitHub, VSCode, PowerShell |
+
+---
+
+## 🧩 프로젝트 구조
+
+src/
+├── components/ # 입력창, 목록 컴포넌트
+├── types/ # Todo 타입 정의
+├── App.tsx # 메인 로직
+├── App.css # 스타일
+
+---
+
+## 📦 실행 방법
+
+```bash
+# 프로젝트 클론
+git clone https://github.com/devasway/todo-react-app.git
+
+# 디렉토리 이동
+cd todo-react-app
+
+# 패키지 설치
+npm install
+
+# 로컬 서버 실행
+npm run dev
+
+---
+
+## 🔔 다음 단계
+
+- [https://todo-react-app-ashy.vercel.app/] 배포 주소 넣기
+- [ ] `preview.png` 스크린샷 넣기 (선택)
+- [ ] 프로젝트 설명 영어 버전 추가 (선택)
+
+---
+
+📌 이 템플릿 마음에 들면 바로 적용하고 커밋해도 돼!
+바로 이어서 **Vercel 배포 도와줄 준비 완료됐어**
+→ **“이제 배포할래!”** 라고 말해줘 😄
+
 ```
