@@ -21,11 +21,15 @@ function App() {
     setTodos((prev) => prev.map((todo) => (todo.id === id ? { ...todo, completed: !todo.completed } : todo)));
   };
 
+  const handleDelete = (id: number) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id));
+  };
+
   return (
     <div style={{ padding: '20px' }}>
       <h1>To-do App</h1>
       <TodoInput onAdd={handleAdd} />
-      <TodoList todos={todos} onToggle={handleToggle} />
+      <TodoList todos={todos} onToggle={handleToggle} onDelete={handleDelete} />
     </div>
   );
 }
